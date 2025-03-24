@@ -79,6 +79,8 @@ function Menu() {
 }
 
 function Pizza({ pizza }) {
+  if (pizza.soldOut) return null;
+
   return (
     <li className="pizza">
       <img src={pizza.photoName} alt={pizza.name} />
